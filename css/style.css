@@ -1,0 +1,11 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url('../imagenes/ptfl-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

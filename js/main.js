@@ -1,42 +1,71 @@
-function validarUsuario(usuario) {
-    const esCorreoElectronico = usuario.includes("@");
-    
-    if (!esCorreoElectronico && usuario.length < 5) {
-        alert("El usuario ingresado no es correcto, por favor inténtalo de nuevo.");
-        return false;
-    }
-    alert("El usuario ingresado es correcto.");
-    return true;
+alert("¡Bienvenido a nuestra tienda de Plata Fácil, te invitamos a conocer todos nuestros productos!");
+
+const productos = [
+    { id: 1, nombre: 'Polera', precio: 10000 },
+    { id: 2, nombre: 'Polerón', precio: 25000 },
+    { id: 3, nombre: 'Gorra', precio: 15000 },
+    { id: 4, nombre: 'Short', precio: 15000 }
+];
+
+// Lista de productos
+function mostrarProductos() {
+    let mensaje = "Elige una prenda para agregar al carrito:\n";
+    productos.forEach(producto => {
+        mensaje += `${producto.id}-${producto.nombre} $${producto.precio}\n`;
+    });
+    mensaje += "Selecciona 0 para finalizar la compra";
+    return mensaje;
 }
 
-function validarContraseña(contraseña) {
-    if (contraseña.length < 6) {
-        alert("Tu contraseña no tiene 6 caracteres, por favor inténtalo de nuevo.");
-        return false;
-    }
-    alert("La contraseña ingresada es correcta.");
-    return true;
-}
-
-function registro() {
-    alert("¡Bienvenido a nuestra tienda de Plata Fácil Clothing! Te invitamos a registrarte para estar al día con todas las noticias y descuentos disponibles para ti.");
-    
-    while (true) {
-        const usuario = prompt("Ingrese su nombre de usuario o correo electrónico:");
-        
-        if (!validarUsuario(usuario)) {
-            continue;
+// Agregar producto al carrito
+function agregarAlCarrito(idProducto) {
+    const producto = productos.find(item => item.id === idProducto);
+    if (producto) {
+        alert("Tu producto ha sido agregado correctamente.");
+        const cantidad = parseInt(prompt("Ingrese la cantidad de este producto:"));
+        if (!isNaN(cantidad) && cantidad > 0) {
+            carrito.push({id: producto.id, nombre: producto.nombre, precio: producto.precio, cantidad: cantidad});
+        } else {
+            alert("Cantidad inválida. Producto no agregado al carrito.");
         }
-    
-        const contraseña = prompt("Ingrese su contraseña (al menos 6 caracteres):");
-        
-        if (!validarContraseña(contraseña)) {
-            continue;
-        }
-        
-        alert("Te has registrado exitosamente, puedes continuar con tu navegación.");
-        break;
+    } else {
+        alert("Producto no encontrado. Por favor, selecciona otro.");
     }
 }
 
-registro();
+function mostrarCarrito() {
+    let mensaje = "Productos en tu carrito:\n";
+    carrito.forEach(item => {
+        mensaje += `${item.cantidad}x ${item.nombre} - $${item.precio * item.cantidad}\n`;
+    });
+    alert(mensaje);
+}
+
+function calcularTotal() {
+    let totalCompra = 0;
+    carrito.forEach(item => {
+        totalCompra += item.precio * item.cantidad;
+    });
+    return totalCompra;
+}
+
+let carrito = [];
+
+let opcion;
+while (opcion !== 0) {
+    opcion = parseInt(prompt(mostrarProductos()));
+    if (!isNaN(opcion) && opcion >= 1 && opcion <= productos.length) {
+        agregarAlCarrito(opcion);
+    } else if (opcion !== 0) {
+        alert("Opción inválida. Por favor, selecciona un producto de la lista o 0 para finalizar la compra.");
+    }
+}
+
+if (carrito.length > 0) {
+    alert("Finalizar compra");
+    const totalCompra = calcularTotal();
+    alert(`Total de la compra: $${totalCompra}`);
+} else {
+    alert("Carrito vacío. No se realizó ninguna compra.");
+}
+

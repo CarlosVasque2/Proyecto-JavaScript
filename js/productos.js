@@ -1,0 +1,58 @@
+const productos = [
+    {
+        id: 1,
+        nombre: "Gorra Ptfl",
+        precio: 15000,
+        imagen: "./imagenes/gorra-ptfl.jpg",
+        stock: false,
+    },
+    {
+        id: 2,
+        nombre: "5 Panel Ptfl",
+        precio: 15000,
+        imagen: "./imagenes/gorra-ptfl-B.jpg",
+        stock: true,
+    },
+    {
+        id: 3,
+        nombre: "Polera Del Corte",
+        precio: 20000,
+        imagen: "./imagenes/polera-ptfl-A.jpg",
+        stock: true,
+    },
+    {
+        id: 4,
+        nombre: "Polera Sarpao",
+        precio: 18000,
+        imagen: "./imagenes/polera-ptfl-B.png",
+        stock: true,
+    },
+    {
+        id: 5,
+        nombre: "Polera Ptfl",
+        precio: 20000,
+        imagen: "./imagenes/polera-ptfl-C.jpg",
+        stock: true,
+    },
+    {
+        id: 6,
+        nombre: "Polera Night Club",
+        precio: 18000,
+        imagen: "./imagenes/polera-ptfl-D.jpg",
+        stock: true,
+    },
+    {
+        id: 7,
+        nombre: "Polera Diamante",
+        precio: 18000,
+        imagen: "./imagenes/polera-ptfl-E.jpg",
+        stock: true,
+    },
+    {
+        id: 8,
+        nombre: "Short Ptfl",
+        precio: 12000,
+        imagen: "./imagenes/short-ptfl.jpg",
+        stock: false,
+    },
+]

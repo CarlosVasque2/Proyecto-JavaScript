@@ -1,11 +1,200 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
-    background-image: url('../imagenes/ptfl-fondo.jpg');
+    background-image: url('../imagenes/ptfl-fondo2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85px;
+    background-color: #ffffff;
+    border-bottom: 1px solid black;
+}
+
+header img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container-principal {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.content {
+    flex: 1;
+}
+
+#btn-carrito button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.btn-add {
+    background-color: #AD6EAB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    height: 380px;
+    width: 270px;
+    margin: 10px;
+}
+
+.no-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    height: 380px;
+    width: 270px;
+    margin: 10px;
+}
+
+.imagen-producto {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.nombre-producto{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.precio-producto{
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.pie-pagina {
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 30px 0px 30px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 200px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .box .red-social i {
+    display: inline-block;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #1A1A1A;
+    padding: 15px 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 12px;
 }

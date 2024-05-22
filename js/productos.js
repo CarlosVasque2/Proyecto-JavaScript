@@ -5,6 +5,7 @@ const productos = [
         precio: 15000,
         imagen: "./imagenes/gorra-ptfl.jpg",
         stock: false,
+        categoria: "gorra"
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ const productos = [
         precio: 15000,
         imagen: "./imagenes/gorra-ptfl-B.jpg",
         stock: true,
+        categoria: "gorra"
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ const productos = [
         precio: 20000,
         imagen: "./imagenes/Polera-ptfl-A.jpg",
         stock: true,
+        categoria: "polera"
     },
     {
         id: 4,
@@ -26,6 +29,7 @@ const productos = [
         precio: 18000,
         imagen: "./imagenes/Polera-ptfl-B.png",
         stock: true,
+        categoria: "polera"
     },
     {
         id: 5,
@@ -33,6 +37,7 @@ const productos = [
         precio: 20000,
         imagen: "./imagenes/Polera-ptfl-C.jpg",
         stock: true,
+        categoria: "polera"
     },
     {
         id: 6,
@@ -40,6 +45,7 @@ const productos = [
         precio: 18000,
         imagen: "./imagenes/Polera-ptfl-D.jpg",
         stock: true,
+        categoria: "polera"
     },
     {
         id: 7,
@@ -47,6 +53,7 @@ const productos = [
         precio: 18000,
         imagen: "./imagenes/Polera-ptfl-E.jpg",
         stock: true,
+        categoria: "polera"
     },
     {
         id: 8,
@@ -54,5 +61,6 @@ const productos = [
         precio: 12000,
         imagen: "./imagenes/short-ptfl.jpg",
         stock: false,
+        categoria: "short"
     },
-]
+];

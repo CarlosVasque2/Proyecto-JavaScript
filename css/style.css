@@ -135,6 +135,65 @@ main h1 {
     text-align: center;
 }
 
+#carrito {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.nombre-producto {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cantidad-producto, .precio-total-producto {
+    font-size: 16px;
+}
+
+.btn-remove {
+    background-color: #d0684d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#total-carrito {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+}
+
+#checkout-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
 .pie-pagina {
     width: 100%;
     background-color: black;

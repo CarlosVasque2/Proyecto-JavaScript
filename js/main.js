@@ -26,6 +26,14 @@ function agregarAlCarrito(id) {
     
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarCarrito();
+    // SweetAlert for adding product
+    Swal.fire({
+        icon: 'success',
+        title: 'Producto agregado',
+        text: `${productoAAgregar.nombre} ha sido agregado al carrito.`,
+        timer: 1500,
+        showConfirmButton: false
+    });
 }
 
 function quitarDelCarrito(id) {
@@ -37,6 +45,14 @@ function quitarDelCarrito(id) {
     }
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarCarrito();
+    // SweetAlert for removing product
+    Swal.fire({
+        icon: 'warning',
+        title: 'Producto eliminado',
+        text: 'El producto ha sido eliminado del carrito.',
+        timer: 1500,
+        showConfirmButton: false
+    });
 }
 
 function crearCard(producto, contenedor) {
@@ -139,14 +155,22 @@ function filtrarProductos() {
 categoryFilter.addEventListener("change", filtrarProductos);
 
 checkoutButton.addEventListener("click", () => {
-    alert("Ha finalizado su compra, muchas gracias");
-    carrito = [];
-    localStorage.removeItem("carrito");
-    actualizarCarrito();
+    // SweetAlert for checkout
+    Swal.fire({
+        icon: 'success',
+        title: 'Compra finalizada',
+        text: 'Ha finalizado su compra, muchas gracias.',
+        confirmButtonText: 'Aceptar'
+    }).then(() => {
+        carrito = [];
+        localStorage.removeItem("carrito");
+        actualizarCarrito();
+    });
 });
 
 productos.forEach(producto => crearCard(producto, "container"));
 actualizarCarrito();
 filtrarProductos();
+
 
 

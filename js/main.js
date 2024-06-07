@@ -172,5 +172,6 @@ productos.forEach(producto => crearCard(producto, "container"));
 actualizarCarrito();
 filtrarProductos();
 
-
-
+fetch("./js/data.json")
+.then(response => response.json())
+.then(data => console.log(data))

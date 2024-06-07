@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "nombre": "Gorra Ptfl",
+        "precio": 15000,
+        "imagen": "./imagenes/gorra-ptfl.jpg",
+        "stock": false,
+        "categoria": "gorra"
+    },
+    {
+        "id": 2,
+        "nombre": "5 Panel Ptfl",
+        "precio": 15000,
+        "imagen": "./imagenes/gorra-ptfl-B.jpg",
+        "stock": true,
+        "categoria": "gorra"
+    },
+    {
+        "id": 3,
+        "nombre": "Polera Del Corte",
+        "precio": 20000,
+        "imagen": "./imagenes/Polera-ptfl-A.jpg",
+        "stock": true,
+        "categoria": "polera"
+    },
+    {
+        "id": 4,
+        "nombre": "Polera Sarpao",
+        "precio": 18000,
+        "imagen": "./imagenes/Polera-ptfl-B.png",
+        "stock": true,
+        "categoria": "polera"
+    },
+    {
+        "id": 5,
+        "nombre": "Polera Ptfl",
+        "precio": 20000,
+        "imagen": "./imagenes/Polera-ptfl-C.jpg",
+        "stock": true,
+        "categoria": "polera"
+    },
+    {
+        "id": 6,
+        "nombre": "Polera Night Club",
+        "precio": 18000,
+        "imagen": "./imagenes/Polera-ptfl-D.jpg",
+        "stock": true,
+        "categoria": "polera"
+    },
+    {
+        "id": 7,
+        "nombre": "Polera Diamante",
+        "precio": 18000,
+        "imagen": "./imagenes/Polera-ptfl-E.jpg",
+        "stock": true,
+        "categoria": "polera"
+    },
+    {
+        "id": 8,
+        "nombre": "Short Ptfl",
+        "precio": 12000,
+        "imagen": "./imagenes/short-ptfl.jpg",
+        "stock": false,
+        "categoria": "short"
+    }
+]
